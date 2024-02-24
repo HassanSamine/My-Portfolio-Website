@@ -78,3 +78,9 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color:#c4b466
 }
+
+/* ---------------about--------------- */
+#about{
+    padding:80px 0;
+    color: #c4b466;
+}
