@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hassan Samine - Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f7bf3849a6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
             </div>
         </div>
     </div>
-<!-- ---------------about--------------- -->
+    <!-- ---------------about--------------- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -36,12 +37,159 @@
                     <img src="user.png">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
-                </div>
+                    <h1 class="sub-title">About Me</h1><br>
+                    <p CLASS="text">Highly motivated and results-oriented Computer Science student with a Bachelor’s
+                        degree in
+                        Engineering Electronics and Telecommunication. Possesses strong analytical and problem-solving
+                        skills, honed through experience in various technical fields. Proven ability to learn new
+                        concepts quickly and apply them to practical situations. Bilingual in English and Arabic, with
+                        proficiency in French. Eager to leverage acquired skills and gain experience in a challenging
+                        and fast-paced environment.</p>
 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Skill 1</span><br>Short description 1</li><br>
+                            <li><span>Skill 2</span><br>Short description 2</li><br>
+                            <li><span>Skill 3</span><br>Short description 3</li><br>
+                            <li><span>Skill 4</span><br>Short description 4</li><br>
+                            <li><span>Skill 5</span><br>Short description 5</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Experience 1</span><br>Short description 1</li><br>
+                            <li><span>Experience 2</span><br>Short description 2</li><br>
+                            <li><span>Experience 3</span><br>Short description 3</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Education 1</span><br>Short description 1</li><br>
+                            <li><span>Education 2</span><br>Short description 2</li><br>
+                            <li><span>Education 3</span><br>Short description 3</li><br>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- ---------------services--------------- -->
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1><br>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Service 1</h2><br>
+                    <p>In the heart of bustling cities, amidst the rhythm of life, stories unfold in the intricate dance
+                        between dreams and realities, where every moment holds the promise of adventure and discovery
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Service 2</h2><br>
+                    <p>In the heart of bustling cities, amidst the rhythm of life, stories unfold in the intricate dance
+                        between dreams and realities, where every moment holds the promise of adventure and discovery.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Service 3</h2><br>
+                    <p>In the heart of bustling cities, amidst the rhythm of life, stories unfold in the intricate dance
+                        between dreams and realities, where every moment holds the promise of adventure and discovery.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+
+    <!-- ---------------portfolio--------------- -->
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1><br>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Project 1</h3>
+                        <p>Description Description Description Description
+                            Description Description Description</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Project 2</h3>
+                        <p>Description Description Description Description
+                            Description Description Description</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Project 3</h3>
+                        <p>Description Description Description Description
+                            Description Description Description</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ---------------Contact--------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-regular fa-paper-plane"></i> saminehassan@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>+48 576 974 005</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Hassan-Samine-CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="Text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 
 </body>
 
