@@ -16,10 +16,10 @@
             <nav>
                 <img src="logoHS4.png" class="logo"> <!-- change logo here -->
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -88,7 +88,7 @@
         </div>
     </div>
     <!-- ---------------portfolio--------------- -->
-    <div class="portfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">Some of my work</h1><br>
             <div class="work-list">
@@ -106,10 +106,14 @@
                     <img src="Algorithm.jpg">
                     <div class="layer">
                         <h3><b>Pattern Matching Algorithms Study</b></h3>
-                        <p>A comparison study of pattern matching algorithms. The study evaluates the performance,
-                            accuracy, and efficiency of various pattern matching algorithms across different datasets
-                            and scenarios.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <p>I have conducted a study on pattern matching algorithms, as well as explored multiple other
+                            algorithmic studies both during my academic journey at the University of Lodz and
+                            independently.
+                            This particular study evaluated the performance, accuracy, and efficiency of various pattern
+                            matching algorithms across
+                            diverse datasets and scenarios.</p>
+                        <a href="https://github.com/HassanSamine/MatchMaster-PatternMatchingAlgorithmsStudy"><i
+                                class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -117,15 +121,16 @@
                     <div class="layer">
                         <h3><b>Top Down Shooter Game:
                                 Zombie Pursuit</b></h3>
-                        <p>A top down shooter game developed using the Godot game engine! In this game, the player take
-                            on the role of a survivor fighting off waves of zombies. Armed with a weapon, the player
-                            must navigate the map, shoots and avoids collisions with zombies, and get to the end of the
-                            map.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <p>I developed a game called 'Zombie Pursuit' using the Godot game engine. I've long been
+                            fascinated by the game development industry, particularly during its early stages. With this
+                            project, I aimed to learn the process of creating a game from scratch, which I successfully
+                            achieved. Along the way, I gained valuable experience in troubleshooting and
+                            problem-solving.</p>
+                        <a href="https://github.com/HassanSamine/Zombie-Pursuit"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a href="https://github.com/HassanSamine" class="btn">See more</a>
         </div>
     </div>
     <!-- ---------------Contact--------------- -->
@@ -137,18 +142,19 @@
                     <p> <i class="fa-regular fa-paper-plane"></i> saminehassan@gmail.com</p>
                     <p> <i class="fa-solid fa-phone"></i>+48 576 974 005</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/hassansaminee/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/hassan-samine-58b2b6181/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <a href="Hassan-Samine-CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="Text" name="Name" placeholder="Your Name" required>
                         <input type="Email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -170,6 +176,25 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZxBKtbwlKt9pnY4aqKz1ckKw1i1pPoJFhCy3UAb0MH-D7mdSIuW6YAkXbu3DCLzynLQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
 </body>
