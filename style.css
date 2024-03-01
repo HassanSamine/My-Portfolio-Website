@@ -108,7 +108,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 img {
-    width: 105%;
+    width: 85%;
     border-radius: 15px;
 
 
@@ -151,7 +151,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #c4b466;
+    background: #885367;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -170,7 +170,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #c4b466;
+    color: #885367;
     font-size: 20px;
 
 }
