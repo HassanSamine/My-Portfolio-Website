@@ -120,7 +120,19 @@ nav ul li a:hover::after {
 }
 
 
-.sub-title {
+.sub-title1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #885367;
+}
+
+.sub-title2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #84b9c7;
+}
+
+.sub-title3 {
     font-size: 60px;
     font-weight: 600;
     color: #c4b466;
@@ -259,7 +271,7 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #c4b466;
+    border: 1px solid #84b9c7;
     padding:14px 50px;
     border-radius: 6px;
     text-decoration: none;
