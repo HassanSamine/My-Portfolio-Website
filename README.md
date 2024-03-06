@@ -12,7 +12,7 @@ Contact: Reach out to me easily through the provided contact information.
 
 # Technologies Used:
 
-HTML
+HTML,
 CSS
 
 # Usage:
